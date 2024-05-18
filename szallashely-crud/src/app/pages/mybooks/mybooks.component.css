@@ -1,0 +1,30 @@
+.results-container {
+    padding: 20px;
+  }
+  
+  .card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 10px;
+  }
+  .highlight {
+    font-weight: bold;
+    background-color: yellow;
+  }
+  .footer-note {
+    margin-top: 10px;
+    font-style: italic;
+    color: gray;
+  }
+  
+  

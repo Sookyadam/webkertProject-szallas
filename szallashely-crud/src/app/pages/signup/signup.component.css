@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container > * {
+    width: 100%;
+    text-align: center;
+  }
+
+  
+.example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    appearance: textfield;
+  }
+  mat-form-field, mat-radio-group {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 100%;
+  }

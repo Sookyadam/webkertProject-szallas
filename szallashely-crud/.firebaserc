@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webkert-szallas": {
+      "hosting": {
+        "szallashely-crud": [
+          "webkert-szallas"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webkert-szallas"
+  }
+}

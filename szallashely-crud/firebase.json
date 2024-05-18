@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "szallashely-crud",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

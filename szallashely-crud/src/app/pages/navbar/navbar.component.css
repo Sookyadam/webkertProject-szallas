@@ -1,0 +1,31 @@
+.toolbar-item-spacer {
+    flex: 1 1 auto;
+}
+.nav-top{
+    background-color: powderblue;
+    font-weight: bolder;
+}
+
+.mat-container {
+    height: 90%;
+    margin: 0;
+}  
+.mat-sidenav {
+    width: 230px;
+}
+.mat-sidenav-content {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.sign-out{
+    justify-content: right;
+    border: none;
+    background: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+      
+}
