@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   background-color: #f5f5f5;
 }
+
 .results-container {
   display: flex;
   flex-direction: column;
@@ -16,7 +17,7 @@ body {
   flex-direction: row;
   width: 100%;
   max-width: 800px;
-  height: 200px; /* Fixed height */
+  height: 250px; /* Fixed height */
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,12 +59,64 @@ body {
 }
 
 .card-content button {
-  margin-left: 250px;
-  margin-top: -45px; /* Push button to the bottom */
+  align-self: flex-start; /* Align the button to the start of the flex container */
   background-color: #6200ea;
   color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 3vh;
+  cursor: pointer;
 }
 
 .card-content button:hover {
   background-color: #3700b3;
+}
+
+@media (max-width: 800px) {
+  .card {
+    flex-direction: column;
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .card-image {
+    height: 200px; /* Fixed height for the image section */
+  }
+
+  .card-image img {
+    border-radius: 10px 10px 0 0; /* Adjust border radius for the image */
+  }
+
+  .card-content {
+    flex: 1;
+    padding: 15px;
+  }
+
+  .card-content h2 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+
+  .card-content p {
+    font-size: 0.9em; /* Adjust font size for smaller screens */
+  }
+
+  .card-content button {
+    align-self: center; /* Center the button */
+    margin: 20px 0 0 0; /* Add margin to the button */
+  }
+}
+
+@media (max-width: 400px) {
+  .card-content h2 {
+    font-size: 1em; /* Further adjust font size for smaller screens */
+  }
+
+  .card-content p {
+    font-size: 0.8em; /* Further adjust font size for smaller screens */
+  }
+
+  .card-content button {
+    font-size: 0.9em; /* Adjust button font size */
+    padding: 8px 16px; /* Adjust padding for the button */
+  }
 }

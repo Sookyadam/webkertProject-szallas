@@ -37,6 +37,7 @@ import { MyBooksComponent } from './pages/mybooks/mybooks.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { UserDataFormComponent } from './pages/user-data-form/user-data-form.component';
+import { DialogService } from './services/dialog.service';
 
 
 
@@ -83,7 +84,8 @@ import { UserDataFormComponent } from './pages/user-data-form/user-data-form.com
     MatTableModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    DialogService
   ],
   bootstrap: [AppComponent],
 })

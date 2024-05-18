@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
 import { UserData } from '../../model/userData.model';
 
 @Component({
   selector: 'app-my-data',
   templateUrl: './my-data.component.html',
-  styleUrl: './my-data.component.css'
+  styleUrls: ['./my-data.component.css']
 })
 export class MyDataComponent implements OnInit {
   userData: UserData | undefined;
@@ -47,7 +46,7 @@ export class MyDataComponent implements OnInit {
     });
   }
 }
-  
+
 //   userDataForm = new FormGroup({
 //     name: new FormControl('', [Validators.required]),
 //     mobile: new FormControl('', [Validators.required]),

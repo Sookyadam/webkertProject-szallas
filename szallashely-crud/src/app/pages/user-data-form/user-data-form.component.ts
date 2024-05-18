@@ -14,7 +14,6 @@ export class UserDataFormComponent implements OnInit, OnChanges {
   userDataForm: FormGroup;
 
   constructor() {
-    // Initialize an empty form group to avoid the undefined error
     this.userDataForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
       mobile: new FormControl('', [Validators.required]),
