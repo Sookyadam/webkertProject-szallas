@@ -16,8 +16,6 @@ export class DialogService {
     if (this.dialogOpen) {
       return;
     }
-
-    // Ellenőrizzük, hogy az aktuális útvonal a HotelsComponent-hez tartozik-e
     if (this.router.url !== '/hotels') {
       return;
     }
@@ -35,9 +33,6 @@ export class DialogService {
 
     dialogRef.afterClosed().subscribe(result => {
       this.dialogOpen = false;
-      if (result) {
-        console.log('Foglalás adatai:', result);
-      }
     });
   }
 }

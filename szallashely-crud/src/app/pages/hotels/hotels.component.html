@@ -7,7 +7,7 @@
       <h2>{{ accommodation.name }}</h2>
       <p>{{ accommodation.description }}</p>
       <p><strong>Location:</strong> {{ accommodation.location }}</p>
-      <p><strong>Price:</strong> {{ accommodation.pricePerNight | currency:'HUF' }} / night</p>
+      <p><strong>Price:</strong> {{ accommodation.pricePerNight | currencyConvert}} / night</p>
       <p><button mat-button color="primary" (click)="openDialog(accommodation)">Book</button></p>
     </div>
   </div>

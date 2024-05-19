@@ -38,6 +38,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { UserDataFormComponent } from './pages/user-data-form/user-data-form.component';
 import { DialogService } from './services/dialog.service';
+import { CurrencyPipe } from './pipes/currency.pipe';
+import { CurrencyService } from './services/currency.service';
 
 
 
@@ -54,6 +56,7 @@ import { DialogService } from './services/dialog.service';
     UserDialogComponent,
     MyBooksComponent,
     UserDataFormComponent,
+    CurrencyPipe,
   ],
   imports: [
     BrowserModule,
@@ -85,7 +88,9 @@ import { DialogService } from './services/dialog.service';
   ],
   providers: [
     provideAnimationsAsync(),
-    DialogService
+    DialogService,
+    CurrencyPipe,
+    CurrencyService
   ],
   bootstrap: [AppComponent],
 })

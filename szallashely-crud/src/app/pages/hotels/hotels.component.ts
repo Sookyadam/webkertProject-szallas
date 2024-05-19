@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Hotel } from '../../model/hotel.model';
 import { DialogService } from '../../services/dialog.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-hotels',
@@ -11,7 +12,7 @@ import { DialogService } from '../../services/dialog.service';
 export class HotelsComponent implements OnInit {
   hotels: Hotel[] = [];
   
-  constructor(private authService: AuthService, private dialogService: DialogService) {}
+  constructor(private authService: AuthService, private dialogService: DialogService, private router:Router) {}
 
   ngOnInit(): void {
     this.authService.getHotels().subscribe((data) => {
@@ -42,6 +43,7 @@ export class HotelsComponent implements OnInit {
           this.dialogService.openHotelDialog(hotel, userData);
         } else {
           alert('User data not found.');
+          this.router.navigate(['/data']);
         }
       }, error => {
         console.error('Error fetching user data:', error);

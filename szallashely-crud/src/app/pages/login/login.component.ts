@@ -21,7 +21,7 @@ export class LoginComponent {
     this.authservice.signInWithEmailAndPassword(user);
     localStorage.setItem("email",this.email.value as string);
     alert("Sikeres bejelentkezés");
-    this.router.navigate(['/hotels']);
+    this.router.navigate(['/main']);
   }
 
   getErrorMessage() {

@@ -2,11 +2,9 @@
     <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
         <mat-icon>menu</mat-icon>
     </button>
-    <span class="title" >Szálláshely foglaló oldal-K64D14</span>
+    <span class="title">Sunset Suites</span>
     <span class="toolbar-item-spacer"></span>
-    <button mat-button class="sign-out" (click)="signOut()" *ngIf="isLogedIn()" >
-        Sign out!
-    </button>
+    <button mat-button class="sign-out" (click)="signOut()" *ngIf="isLogedIn()">Sign out!</button>
 </mat-toolbar>
 
 <mat-sidenav-container class="app-container">
@@ -42,10 +40,17 @@
                     </a>
                 </mat-nav-list>
             </mat-expansion-panel>
+            <mat-form-field appearance="fill" *ngIf="isLogedIn()">
+                <mat-label><mat-icon>currency_exchange</mat-icon>Válassz pénznemet</mat-label>
+                <mat-select [(value)]="selectedCurrency" (selectionChange)="changeCurrency($event.value)">
+                  <mat-option value="HUF"><mat-icon>savings</mat-icon>HUF</mat-option>
+                  <mat-option value="USD"><mat-icon>attach_money</mat-icon>USD</mat-option>
+                  <mat-option value="EUR"><mat-icon>euro</mat-icon>EUR</mat-option>
+                </mat-select>
+              </mat-form-field>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <router-outlet>
-        </router-outlet>
+        <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
