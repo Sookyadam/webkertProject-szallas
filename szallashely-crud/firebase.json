@@ -2,8 +2,14 @@
   "hosting": [
     {
       "target": "szallashely-crud",
-      "source": ".",
+      "public": "dist/szallashely-crud/browser",
       "frameworksBackend": {}
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "**",
+      "destination": "/index.html"
     }
   ]
 }
